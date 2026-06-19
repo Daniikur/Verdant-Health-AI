@@ -218,23 +218,8 @@ http://127.0.0.1:8000/docs
 
 # Screenshots
 
-You can add screenshots here.
+<img width="1896" height="996" alt="image" src="https://github.com/user-attachments/assets/80f94d4b-7b27-48f2-8cb7-795c2f4d3f0c" />
 
-Example:
-
-```
-screenshots/
-
-login.png
-
-dashboard.png
-
-appointment.png
-
-chatbot.png
-
-symptom-checker.png
-```
 
 ---
 
