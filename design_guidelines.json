@@ -1,0 +1,98 @@
+{
+  "theme": "LIGHT",
+  "archetype": "1 (Organic & Earthy)",
+  "emotion_and_vibe": "Calm, trustworthy, spacious, warm, credentialed, and reassuring. Avoids generic SaaS medical blue. Replaces clinical coldness with an airy, botanical, premium wellness feel.",
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "font_weights": {
+      "headings": "font-light to font-medium for a premium editorial look",
+      "body": "font-light or font-normal for high clarity in medical data"
+    },
+    "hierarchy_rules": "H1 max text-5xl to text-6xl with tracking-tight. Overlines/Labels MUST be Uppercase, text-xs, with wide spacing (tracking-[0.2em]). Gap between heading and subheading must not exceed 2 Tailwind steps.",
+    "instructions": "Do not use Inter, Roboto, or generic sans-serif for headings. Emphasize contrast between Serif headings and clean Sans body."
+  },
+  "colors": {
+    "background": {
+      "base": "#FAF9F6",
+      "surface": "#FFFFFF",
+      "surface_alt": "#F5F2EB"
+    },
+    "primary": {
+      "DEFAULT": "#3A4D2B",
+      "hover": "#2E3D22",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#E27D60",
+      "hover": "#C96D52",
+      "foreground": "#FFFFFF"
+    },
+    "accent": {
+      "DEFAULT": "#8FA998",
+      "foreground": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#1A1A1A",
+      "muted": "#6B6B6B"
+    },
+    "border": "#E5E0D8",
+    "status": {
+      "success": "#3A4D2B",
+      "warning": "#E27D60",
+      "error": "#D9534F"
+    }
+  },
+  "spacing_and_layout": {
+    "philosophy": "Generous Spacing Philosophy. Use p-8 or p-12 for breathing room. Optical alignment over geometrical.",
+    "marketing_grid": "MODE A: TETRIS GRID. Asymmetrical, grid-cols-1 md:grid-cols-12, wide gaps (gap-8 to gap-12). Never fill 100% perfectly, leave negative space.",
+    "dashboard_grid": "MODE B: CONTROL ROOM GRID. Dense, grid-cols-1 md:grid-cols-4, tight gaps (gap-4 or gap-6). Ensure all widgets use h-full.",
+    "corners": "rounded-2xl for main cards and dialogs, rounded-full for pills and action buttons to keep it soft and approachable."
+  },
+  "surfaces_and_shadows": {
+    "cards": "Flat solid surfaces. Mix soft ambient shadow (shadow-sm) with crisp 1px border (border-[#E5E0D8]) to ground it. No glassmorphism for health apps to prevent visual refraction of data.",
+    "header": "Solid background (bg-[#FAF9F6] or bg-white) with a hard bottom border, z-50. No transparent headers.",
+    "jitsi_room_container": "Give the telemedicine room a sleek border, rounded-2xl overflow-hidden, and a soft shadow-lg to pop from the background."
+  },
+  "motion_and_interaction": {
+    "hover": "Explicit hover states (hover:bg-primary/90 hover:text-white). Focus states must have ring-2 ring-offset-2 ring-primary/50.",
+    "jitsi_room": "Entrance animation: Framer motion scale up (0.95 to 1) with opacity fade over 0.4s.",
+    "chat_bubbles": "Staggered slide up (translate-y-4 to 0) and fade in (opacity 0 to 1) for AI Symptom Checker and Health Assistant.",
+    "dashboards": "Micro-interactions for feedback. Minimalist entrance for data cards."
+  },
+  "components_strategy": {
+    "marketing": "Use pure HTML/Tailwind for layouts. Hero section needs high impact, asymmetric layout. Form logic via Shadcn.",
+    "dashboard": "Shadcn components heavily customized. Tables, Select, Cards, Dialogs with rounded-2xl, customized spacing, and our primary Moss Green color.",
+    "ai_features": "Symptom checker and Report summarizer should feel like premium assistant interfaces, not standard chatbots. Use our secondary Terracotta color for AI insights to distinguish from standard data.",
+    "testing": "All interactive elements MUST include data-testid (e.g., data-testid='login-submit-button', data-testid='book-appointment-btn')."
+  },
+  "icons": "lucide-react",
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1743657166982-9e3ff272122b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG9yZ2FuaWMlMjBzaGFwZSUyMHdhcm0lMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc4MTcwMzMwMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract, pastel colors and flowing shapes. Use as a warm inviting background overlay."
+    },
+    "clinic_interior": {
+      "url": "https://images.unsplash.com/photo-1665231795856-769fb08a90bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHx3YXJtJTIwbW9kZXJuJTIwY2xpbmljJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzgxNzAzMzAwfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Warm modern clinic interior for marketing features or about section."
+    },
+    "doctor_portraits": [
+      {
+        "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODE3MDMzMDB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional male doctor with glasses."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1673865641073-4479f93a7776?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzN8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwwfHx8fDE3ODE3MDMzMDB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional female doctor."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Inject 'lucide-react' for icons.",
+    "Configure tailwind.config.js with the provided color hex codes as CSS variables or direct extensions.",
+    "Build Shadcn components but override their default borders/radii to match '0.75rem' or '1rem' (rounded-2xl) and use the custom colors.",
+    "Wrap Patient Dashboard, Doctor Dashboard, Admin Dashboard, and Telemedicine Jitsi Room into distinct route segments with proper layout structures.",
+    "Ensure 'data-testid' is present on all interactive elements.",
+    "DO NOT use placeholder URLs. Map the provided media URLs to the appropriate UI sections."
+  ]
+}

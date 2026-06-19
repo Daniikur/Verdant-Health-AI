@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Verdant: warm, organic, earthy */
+        --background: 44 33% 97%;            /* #FAF9F6 */
+        --foreground: 0 0% 10%;              /* #1A1A1A */
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 10%;
+        --primary: 89 28% 24%;               /* #3A4D2B Moss */
+        --primary-foreground: 0 0% 100%;
+        --secondary: 38 19% 94%;             /* surface-alt warm */
+        --secondary-foreground: 0 0% 10%;
+        --muted: 38 19% 94%;
+        --muted-foreground: 0 0% 42%;
+        --accent: 141 12% 62%;               /* #8FA998 */
+        --accent-foreground: 0 0% 10%;
+        --destructive: 1 60% 58%;            /* #D9534F */
+        --destructive-foreground: 0 0% 100%;
+        --border: 38 19% 87%;                /* #E5E0D8 */
+        --input: 38 19% 87%;
+        --ring: 89 28% 24%;
+        --terra: 15 67% 63%;                 /* #E27D60 */
+        --terra-fg: 0 0% 100%;
+        --radius: 1rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    html, body, #root { background-color: hsl(var(--background)); }
+    body {
+        margin: 0;
+        font-family: 'Outfit', system-ui, sans-serif;
+        color: hsl(var(--foreground));
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, .font-display {
+        font-family: 'Cormorant Garamond', 'Georgia', serif;
+        letter-spacing: -0.01em;
+    }
+    code, pre, .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+    }
+    .overline {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-weight: 500;
+        color: hsl(var(--muted-foreground));
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: hsl(var(--background)); }
+::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--accent)); }
+
+/* Subtle grain on hero backgrounds */
+.grain-bg {
+    background-image:
+        radial-gradient(circle at 20% 10%, rgba(58, 77, 43, 0.06), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(226, 125, 96, 0.07), transparent 50%);
+}
+
+/* Soft entrance */
+@keyframes verdant-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: verdant-fade-in 0.5s ease forwards; }
+.fade-in-delay-1 { animation: verdant-fade-in 0.5s ease 0.1s forwards; opacity: 0; }
+.fade-in-delay-2 { animation: verdant-fade-in 0.5s ease 0.2s forwards; opacity: 0; }
+.fade-in-delay-3 { animation: verdant-fade-in 0.5s ease 0.3s forwards; opacity: 0; }
+
+@layer base {
+    [data-debug-wrapper="true"] { display: contents !important; }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit; margin-right: inherit; margin-top: inherit; margin-bottom: inherit;
+        padding-left: inherit; padding-right: inherit; padding-top: inherit; padding-bottom: inherit;
+        column-gap: inherit; row-gap: inherit; gap: inherit;
+        border-left-width: inherit; border-right-width: inherit; border-top-width: inherit; border-bottom-width: inherit;
+        border-left-style: inherit; border-right-style: inherit; border-top-style: inherit; border-bottom-style: inherit;
+        border-left-color: inherit; border-right-color: inherit; border-top-color: inherit; border-bottom-color: inherit;
+    }
+}
