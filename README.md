@@ -219,6 +219,9 @@ http://127.0.0.1:8000/docs
 # Screenshots
 
 <img width="1896" height="996" alt="image" src="https://github.com/user-attachments/assets/80f94d4b-7b27-48f2-8cb7-795c2f4d3f0c" />
+<img width="1881" height="887" alt="image" src="https://github.com/user-attachments/assets/003e6f91-88c9-4ea8-be32-25caa3d18f0f" />
+<img width="1882" height="982" alt="image" src="https://github.com/user-attachments/assets/56c14b7b-ea5f-4e7e-8d6a-d2f22f942293" />
+<img width="1883" height="804" alt="image" src="https://github.com/user-attachments/assets/6940e6eb-07d5-41e5-b152-48498099c1b9" />
 
 
 ---
